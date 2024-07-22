@@ -105,7 +105,7 @@ code, verification code. VFD must be able to generate verification information
 22. If for any reason VFD does not receive response at all or receiving negative response (`ACKCODE` which is not 0) for specific invoice/receipt then when resubmitting the same invoice/receipt to TRA the VFD should submit the original xml content and not the modified the content this include also `ZNUM` and `RCT_DATE`, `RCT_TIME` must always be date of the first attempt and not the current date/time. This is to say monitor status of each receipt
     and only when response with `ACKCODE 0` returned consider receipt successful delivered to TRA
 
-23. Print/send receipt/invoice to customer (do not wait for TRA response) and immediately send receipt to TRA (1 and 2 can either be concurrent or 2 can follow after 1)
+23. Print/send receipt/invoice to customer (do not wait for TRA response) and immediately send receipt to TRA (1 and 2 can either be concurrent or 2 can follow after 1).
 
 24. For a specific receipt if no response is received VFD should keep try sending same request until it receives response.
 
